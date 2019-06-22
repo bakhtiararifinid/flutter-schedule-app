@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:schedule_app/pages/home_page.dart';
+import 'package:schedule_app/pages/schedule_detail_page.dart';
 
 class App extends StatelessWidget {
   @override
@@ -11,7 +12,10 @@ class App extends StatelessWidget {
         primaryColor: Colors.white,
         scaffoldBackgroundColor: Colors.grey[300]
       ),
-      home: HomePage(),
+      routes: {
+        '/': (context) => HomePage(),
+        '/schedule-detail': (context) => ScheduleDetailPage(),
+      },
     );
   }
 }

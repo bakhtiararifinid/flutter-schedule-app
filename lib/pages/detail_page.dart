@@ -219,17 +219,13 @@ class Schedule extends StatelessWidget {
                       color: active ? Colors.white : null,
                     ),
               ),
-              if (active)
-                InkWell(
-                  child: Icon(
-                    Icons.edit,
-                    size: 16,
-                    color: active ? Colors.white : null,
-                  ),
-                  onTap: () => Navigator.of(context).pushNamed(
-                        '/schedule-detail',
-                      ),
-                )
+              active
+                  ? Icon(
+                      Icons.edit,
+                      size: 16,
+                      color: active ? Colors.white : null,
+                    )
+                  : Container()
             ],
           ),
           SizedBox(height: 8),
